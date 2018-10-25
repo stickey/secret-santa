@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: stocke
+---
+testFramework: spock
+sourceLanguage: groovy

@@ -1,0 +1,7 @@
+micronaut:
+    application:
+        name: secret-santa
+endpoints:
+    info:
+        enabled: true
+        sensitive: false
