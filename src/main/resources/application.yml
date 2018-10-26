@@ -5,3 +5,10 @@ endpoints:
     info:
         enabled: true
         sensitive: false
+
+datasources:
+    default:
+        url: ${JDBC_URL:`jdbc:postgresql://192.168.127.157/testing1;DB_CLOSE_DELAY=-1;`}
+        username: ${JDBC_USER:postgres}
+        password: ${JDBC_PASSWORD:""}
+        driverClassName: ${JDBC_DRIVER:org.postgresql.Driver}

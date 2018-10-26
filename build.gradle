@@ -9,6 +9,10 @@ plugins {
     id "com.github.johnrengelman.shadow" version "4.0.0"	
 }
 
+ext {
+    gormVersion = '6.1.9.RELEASE'
+}
+
 apply plugin:"application"
 apply plugin:"groovy"
 apply plugin: "com.gorylenko.gradle-git-properties"
@@ -36,8 +40,17 @@ dependencies {
     compile "io.micronaut:micronaut-management"
     compile "io.micronaut:micronaut-runtime-groovy"
     compile "io.micronaut:micronaut-validation"
+
+    compile "io.micronaut.configuration:micronaut-hibernate-validator"
+    compile "io.micronaut.configuration:micronaut-hibernate-gorm"
+    compile "org.grails:grails-datastore-gorm-hibernate5:$gormVersion"
+    compile "io.micronaut.configuration:micronaut-jdbc-hikari"
+
     compileOnly "io.micronaut:micronaut-inject-groovy"
+
     runtime "ch.qos.logback:logback-classic:1.2.3"
+    runtime group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+
     testCompile "io.micronaut:micronaut-inject-groovy"
     testCompile("org.spockframework:spock-core") {
         exclude group: "org.codehaus.groovy", module: "groovy-all"
