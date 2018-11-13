@@ -6,14 +6,21 @@ import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Produces
 
+import javax.inject.Inject
+
 @CompileStatic
 @Controller("/player")
 class PlayerController {
 
+    @Inject
+    DAO dao
+
     @Get("/")
     @Produces(MediaType.APPLICATION_JSON)
     Map index() {
-        ["key": "value"]
+        dao.insertPlayer()
+
+        [:]
     }
 
 

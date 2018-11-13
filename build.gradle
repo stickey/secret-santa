@@ -41,10 +41,15 @@ dependencies {
     compile "io.micronaut:micronaut-runtime-groovy"
     compile "io.micronaut:micronaut-validation"
 
-    compile "io.micronaut.configuration:micronaut-hibernate-validator"
-    compile "io.micronaut.configuration:micronaut-hibernate-gorm"
-    compile "org.grails:grails-datastore-gorm-hibernate5:$gormVersion"
-    compile "io.micronaut.configuration:micronaut-jdbc-hikari"
+//    compile "io.micronaut.configuration:micronaut-hibernate-validator"
+//    compile "io.micronaut.configuration:micronaut-hibernate-gorm"
+//    compile "org.grails:grails-datastore-gorm-hibernate5:$gormVersion"
+//    compile "io.micronaut.configuration:micronaut-postgres-reactive"
+//    compile "io.micronaut.configuration:micronaut-jdbc-tomcat"
+
+    compile "io.micronaut.configuration:micronaut-postgres-reactive"
+
+
 
     compileOnly "io.micronaut:micronaut-inject-groovy"
 
